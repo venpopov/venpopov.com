@@ -10,6 +10,7 @@ _site
 *.html
 node_modules
 package-lock.json
+!utils/package-lock.json
 
 /.quarto/
 
