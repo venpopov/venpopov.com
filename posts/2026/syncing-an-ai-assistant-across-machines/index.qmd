@@ -84,4 +84,4 @@ The temptation to dump detailed explanations in CLAUDE.md, which I fell victim t
 
 None of this is clever technology. git, Syncthing, Tailscale, a closet NAS - all boring, all a decade old. What took two months to start and an afternoon to finish wasn't the tools; it was deciding what I actually wanted - *carry my work between machines, trust nothing I don't have to, and get told only when something is genuinely wrong* - and letting that shape the design. The payoff is the best kind there is: a thing I now never have to think about again (hopefully).
 
-And I finally got to delete (the line)[https://github.com/venpopov/dotfiles/issues/3] from my todo list.
+And I finally got to delete [the line](https://github.com/venpopov/dotfiles/issues/3) from my todo list.
