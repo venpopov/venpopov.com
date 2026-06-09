@@ -6,7 +6,7 @@ on:
 
 name: Render and Publish
 
-permissions: 
+permissions:
     contents: write
     pages: write
 
@@ -33,6 +33,25 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'utils/package-lock.json'
+
+      - name: Cache Quarto freeze directory
+        uses: actions/cache@v4
+        with:
+          path: _freeze
+          key: quarto-freeze-${{ runner.os }}-${{ hashFiles('posts/**/*.qmd', '*.qmd', 'R/**/*.R') }}
+          restore-keys: |
+            quarto-freeze-${{ runner.os }}-
+
+      - name: Install npm dependencies
+        working-directory: utils
+        run: npm ci
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
