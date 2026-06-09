@@ -1,0 +1,82 @@
+---
+title: "Syncing my AI coding assistant across machines — and the locked door that wasn't"
+subtitle: "A todo that sat for a month: two layers of sync, an encrypted box in the closet, and the afternoon I found my NAS wide open."
+description: "How I taught my AI coding assistant to follow me between two Macs — and what an afternoon of poking at my own NAS taught me about the difference between hardened and not-exposed."
+categories: [self-hosting, security, 2026]
+date: "2026-06-09"
+draft: true
+---
+
+For about a month, the same line sat near the top of my todo list: *make my AI coding assistant follow me between my two Macs.* I work on a desktop at the office and a laptop everywhere else, and [Claude Code](https://claude.com/claude-code) keeps a surprisingly rich pile of state in its `~/.claude` folder — not just settings, but the full transcripts of every session. The dream was mundane: start something on the laptop on the train, sit down at the desk, hit `--resume`, and not think about it.
+
+It sounds like a one-liner. *Just put it in Dropbox.* It wasn't — and the reasons it wasn't are the interesting part.
+
+### Two kinds of data want two different tools
+
+The folder is really two things wearing one coat:
+
+1. **Authored config** — settings, custom commands, hooks. Things I write deliberately and want versioned, with history and the ability to undo a bad edit.
+2. **Session state** — transcripts, history, caches. Things the tool churns constantly, that I never touch by hand but very much want to carry between machines.
+
+These have opposite needs. Config wants *git*: deliberate commits, diffs, a remote, rollback. Session state wants the *opposite* — continuous, silent, no commit ritual, last-write-wins on files that change every few seconds. This is exactly where "just sync the whole folder" falls over: git chokes on the churn, and a plain file-syncer gives you no history for the stuff you actually authored.
+
+So: two layers, one for each.
+
+### Layer 1: git, but fail-closed
+
+The config layer is a private git repo living right at `~/.claude`. The twist is the `.gitignore`. A tool like this *invents new directories over time*, and some of them quietly hold tokens or caches. With an ordinary denylist `.gitignore`, the day the tool adds a `credentials.json` or a new cache dir, a careless `git add -A` commits it.
+
+So I inverted it. The `.gitignore` **ignores everything**, then re-includes only what I name:
+
+```gitignore
+/*
+
+!/settings.json
+!/commands/
+!/hooks/
+# ...only the things I authored, listed by hand
+```
+
+It's fail-closed. To track something new I have to *opt it in*; a mystery directory that shows up next month is invisible by default. That's exactly the right posture for a folder I don't fully control. A secret-scanning pre-commit hook is the backstop — it refuses any commit that looks like it contains a credential.
+
+### Layer 2: live sync, and a box I don't have to trust
+
+For the session state, I used [Syncthing](https://syncthing.net/) — peer-to-peer file sync with no cloud middleman. The laptop and desktop find each other and sync directly.
+
+But two laptops are rarely online at the same moment, so I wanted an always-on hub in the middle. I have a small NAS in a closet that's been quietly reliable for years — perfect, except for one thing: **a backup hub that can read your data is a backup hub that can leak your data.** Session transcripts are precisely what you don't want sitting in plaintext on a box that faces the internet.
+
+Syncthing has a lovely answer here: *receive-encrypted* folders. The two trusted machines hold the plaintext; the NAS receives only a stream of ciphertext and a folder it literally cannot read, because it never has the password. Zero-knowledge backup. If the NAS is stolen or popped, the attacker gets noise. (The flip side, of course: lose the password and the backup is noise to *me* too — so it lives in my password manager, not my head.)
+
+### The locked door that wasn't
+
+Here's where the afternoon got humbling.
+
+The NAS has to be reachable for the laptop to sync from the road, so it sits behind my home router on a dynamic hostname. I'd hardened it *years* ago — two-factor auth, automatic IP banning, a firewall, valid certificates. I felt good about it.
+
+Then I actually probed it from the outside, and found the Syncthing **admin web UI answering to the entire internet.**
+
+The firewall was on. It even had a deny-all rule at the bottom. But one rule above it allowed *all ports* from a handful of whole countries, and another — auto-created by the package installer, helpfully — had opened the admin panel to everyone. The lesson landed hard:
+
+> Hardening your authentication is not the same as not being exposed.
+
+Two-factor and auto-ban slow down a brute-force attempt. They do nothing for a pre-auth bug in an admin panel that shouldn't be on the public internet in the first place. And I'd been here before: years earlier I'd used the NAS's built-in remote-access relay and gotten a steady drizzle of failed-login alerts from bots. All that hardening had been my *reaction* to that noise — building a taller wall around a door that simply shouldn't have been public.
+
+The real fix isn't a taller wall. It's no public door.
+
+So I moved remote access onto [Tailscale](https://tailscale.com/), a private mesh built on WireGuard. All my devices join one private network; nothing listens on the public internet at all. The firewall collapsed to essentially a single idea: allow the sync protocol, allow my private mesh, deny everything else. I re-probed from outside, and the admin panels had gone dark. The bot noise stopped, because there was nothing left to knock on. A nice bonus: it works from any country — which the country-based firewall rule never did when I traveled somewhere unexpected.
+
+### Resilience, without crying wolf
+
+The last piece was making it survive real life: closed laptop lids, flaky conference wifi, a machine that's off for a weekend.
+
+Two small realizations made this easy. First, the sync doesn't depend on the network drive being *mounted* at all — Syncthing is a background service that reconnects on its own and resumes where it left off. Half the fragility I'd braced for simply didn't exist.
+
+Second — and this is the bit I'm fondest of — a monitor that alerts on *disconnects* would page me constantly, because my laptop disconnects every time I shut it. The signal I actually want is **staleness**: tell me only when a machine hasn't synced in more than a day. Normal life is silent; a genuinely stuck machine is loud. A monitor that cries wolf gets muted, and a muted monitor is worse than no monitor at all.
+
+### The part I keep smiling about
+
+There's a small loop I closed at the end. The assistant reads a config file at the start of every session — so I dropped a few lines into it describing how its *own* environment works: your state is synced across two machines and an encrypted box, here's where the full writeup lives. The system quietly documents itself to the thing running inside it.
+
+None of this is clever technology. git, Syncthing, Tailscale, a closet NAS — all boring, all a decade old. What took a month to start and an afternoon to finish wasn't the tools; it was deciding what I actually wanted — *carry my work between machines, trust nothing I don't have to, and get told only when something is genuinely wrong* — and letting that shape the design. The payoff is the best kind there is: a thing I now never have to think about again.
+
+And I finally got to delete the line from my todo list.
