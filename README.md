@@ -16,6 +16,17 @@ The `utils/purge_css.sh` script will auto-install npm dependencies if `utils/nod
 
 The website is automatically built and deployed via GitHub Actions whenever changes are pushed to the `main` branch. See `.github/workflows/publish.yml` for details.
 
+### GitHub Actions Caching
+
+The publishing workflow uses several caching strategies to speed up builds:
+
+1. **npm dependencies** - Cached via `actions/setup-node@v4` using `utils/package-lock.json`
+2. **Quarto _freeze directory** - Cached via `actions/cache@v4` to avoid re-rendering unchanged content
+3. **R packages** - Cached via `r-lib/actions/setup-renv@v2` using `renv.lock`
+4. **Quarto, Pandoc, and R installations** - Cached by the respective setup actions
+
+The cache keys are based on file hashes (for npm and Quarto) and lockfile contents (for R packages), ensuring cache invalidation when dependencies or content changes.
+
 ### Local Development
 
 To preview changes locally before pushing:
