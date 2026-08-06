@@ -1,14 +1,3 @@
-% LaTeX Curriculum Vitae Template
-%
-% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
-% http://jblevins.org/projects/cv-template/
-%
-% You may use use this document as a template to create your own CV
-% and you may redistribute the source code freely. No attribution is
-% required in any resulting documents. I do ask that you please leave
-% this notice and the above URL in the source code if you choose to
-% redistribute this file.
-
 \documentclass[letterpaper]{article}
 
 \usepackage{hyperref}
@@ -25,18 +14,10 @@
 	\noindent\ignorespaces}{%
 	\par\medskip}
 
-% Comment the following lines to use the default Computer Modern font
-% instead of the Palatino font provided by the mathpazo package.
-% Remove the 'osf' bit if you don't like the old style figures.
 \usepackage[T1]{fontenc}
 \usepackage[sc,osf]{mathpazo}
 
-% Set your name here
 \def\name{Vencislav Popov}
-
-% Replace this with a link to your CV if you like, or set it empty
-% (as in \def\footerlink{}) to remove the link in the footer:
-%\def\footerlink{http://jblevins.org/projects/cv-template/}
 
 % The following metadata will show up in the PDF properties
 \hypersetup{
@@ -54,6 +35,8 @@
   top=0.75in
 }
 
+\urlstyle{same}
+
 % Customize page headers
 \pagestyle{myheadings}
 \markright{\name}
@@ -63,13 +46,6 @@
 \usepackage{sectsty}
 \sectionfont{\rmfamily\mdseries\Large}
 \subsectionfont{\rmfamily\mdseries\itshape\large}
-
-% Other possible font commands include:
-% \ttfamily for teletype,
-% \sffamily for sans serif,
-% \bfseries for bold,
-% \scshape for small caps,
-% \normalsize, \large, \Large, \LARGE sizes.
 
 % Don't indent paragraphs.
 \setlength\parindent{0em}
@@ -88,20 +64,9 @@
 % Place name at left
 {\huge \name}
 
-% Alternatively, print name centered and bold:
-%\centerline{\huge \bf \name}
-
-%\vspace{0.25in}
-
-%\begin{minipage}{0.45\linewidth}
-%  \href{http://www.nbu.bg/}{New Bulgarian University} \\
-%  Department of Statistics \\
-%  Smith Building \\
-%  Chapel Hill, NC 27599
-%\end{minipage}
-\subsubsection*{May, 2026}
+\subsubsection*{July, 2026}
 \begin{minipage}{0.80\linewidth}
-	Ven Popov  | vencislav.popov@gmail.com | http://venpopov.com\\
+	Ven Popov  | \href{mailto:vencislav.popov@gmail.com}{vencislav.popov@gmail.com} | \url{https://venpopov.com} \\
 \end{minipage}
 
 
@@ -115,6 +80,7 @@
 	& {\it Glushko Dissertation Prize (2021)}\\[6pt]
 	2015 & B.A., Psychology, New Bulgarian University\\
 \end{tabular}
+
 
 \section*{Research Experience}
 
@@ -171,26 +137,26 @@
 
 \section*{Publications} \rightline{\textbf{(* = co-first author; $\dagger$ = corresponding author; \underline{student co-author})}}
 
- \subsection*{Manuscripts in progress}
+\subsection*{Manuscripts in progress}
 
- \begin{longtable}{p{0.7cm}p{15cm}}
- & \textbf{Popov, V.} \& Oberauer, K. (submitted). How to build an observatory for the mind. Preprint available at https://doi.org/10.31234/osf.io/hmu9r\\[6pt]
+\begin{longtable}{p{0.7cm}p{15cm}}
+ & \textbf{Popov, V.} \& Oberauer, K. (submitted). How to build an observatory for the mind. Preprint available at \url{https://doi.org/10.31234/osf.io/hmu9r}\\[6pt]
 &\\
-& van Dongen, N. N., Glöckner, A., Musfeld, P., Sarafoglou, A., Borsboom, D., … \textbf{Popov, V.}, … Yuan, L. (submitted). The state and status of theory in psychological science. Preprint available at https://doi.org/10.31234/osf.io/2fjx4\\[6pt]
+& van Dongen, N. N., Glöckner, A., Musfeld, P., Sarafoglou, A., Borsboom, D., … \textbf{Popov, V.}, … Yuan, L. (submitted). The state and status of theory in psychological science. Preprint available at \url{https://doi.org/10.31234/osf.io/2fjx4_v2}\\[6pt]
 &\\
-& \underline{Barthelmes, B. T.} \& \textbf{Popov, V.} (submitted). Towards measuring the theory crisis in psychology: An LLM-assisted discourse-analysis approach. Preprint available at https://doi.org/10.31234/osf.io/4y2sp\\[6pt]
+& \underline{Barthelmes, B. T.} \& \textbf{Popov, V.} (submitted). Towards measuring the theory crisis in psychology: An LLM-assisted discourse-analysis approach. Preprint available at \url{https://doi.org/10.31234/osf.io/4y2sp_v2}\\[6pt]
 &\\
-& Greeno, D. J., Morey, C. C., \& \textbf{Popov, V.} (submitted). Encoding serial items depletes cognitive resource: An adversarial comparison of reconfiguration and resource-depletion accounts of working memory. Preprint available at https://doi.org/10.31234/osf.io/vj8pn\\[6pt]
+& Greeno, D. J., Morey, C. C., \& \textbf{Popov, V.} (submitted). Encoding serial items depletes cognitive resource: An adversarial comparison of reconfiguration and resource-depletion accounts of working memory. Preprint available at \url{https://doi.org/10.31234/osf.io/vj8pn_v3}\\[6pt]
 &\\
- & \textbf{Popov, V.} (under review). Cognitive resources can be intentionally released when processed information becomes irrelevant: Insights from the primacy effect in working memory. Preprint available at https://psyarxiv.com/gct58\\[6pt]
+ & \textbf{Popov, V.} (under review). Cognitive resources can be intentionally released when processed information becomes irrelevant: Insights from the primacy effect in working memory. Preprint available at \url{https://osf.io/preprints/psyarxiv/gct58}\\[6pt]
 &\\
-& \textbf{Popov, V.} (under revision). If God Handed Us the Ground-Truth Theory of Memory, How Would We Recognize It? Preprint available at https://psyarxiv.com/ay5cm/\\
+& \textbf{Popov, V.} (under revision). If God Handed Us the Ground-Truth Theory of Memory, How Would We Recognize It? Preprint available at \url{https://osf.io/preprints/psyarxiv/ay5cm}\\
  \end{longtable}
 
 \subsection*{Journal publications}
 
 \begin{longtable}{p{0.7cm}p{15cm}}
-2026 & Ma, S., \textbf{Popov, V.}, \& Zhang, Q. (2026). Cognitive constraints and reward environments jointly shape memory formation. {\it Psychological Review.} Advance online publication. https://doi.org/10.1037/rev0000612\\[6pt]
+2026 & Ma, S., \textbf{Popov, V.}, \& Zhang, Q. (2026). Cognitive constraints and reward environments jointly shape memory formation. {\it Psychological Review.} Advance online publication. \url{https://doi.org/10.1037/rev0000612}\\[6pt]
 &\\
 & Dames, H., \textbf{Popov, V.}, \& Oberauer, K. (2026). Forget for now, but remember later: Can people selectively remove information from working memory while keeping it in long-term memory? {\it Journal of Cognition, 9}(1), 25.\\[6pt]
 &\\
@@ -206,7 +172,7 @@
 &\\
 2023 & Dames, H. \& \textbf{Popov, V.} (2023). When does intent matter for memory? Bridging perspectives with Craik. {\it Journal of Experimental Psychology: General, 152}(11), 3300--3309.\\[6pt]
 &\\
-& \textbf{Popov, V.\textsuperscript{\textdagger}} \& \underline{Dames, H.} (2023). Intent Matters: Resolving the Intentional vs Incidental Learning Paradox in Episodic Long-term Memory. {\it Journal of Experimental Psychology: General, 152(1), 268–300}. Preprint available at https://psyarxiv.com/jf2en \vspace{4pt}\newline 
+& \textbf{Popov, V.\textsuperscript{\textdagger}} \& \underline{Dames, H.} (2023). Intent Matters: Resolving the Intentional vs Incidental Learning Paradox in Episodic Long-term Memory. {\it Journal of Experimental Psychology: General, 152(1), 268–300}. Preprint available at \url{https://osf.io/preprints/psyarxiv/jf2en} \vspace{4pt}\newline
 \-\hspace{0.8cm}- {\it 2023 ESCOP Early Career Pubclication Award} \\[6pt]
 & \\
 2022 & Norton, C. M., Ibinson, J. W., Pcola, S. J., \textbf{Popov, V.}, Tremel, J. J., Reder, L. M., ... \& Vogt, K. M. (2022). Neutral auditory words immediately followed by painful electric shock may show reduced next-day recollection. {\it Experimental Brain Research}, 1-13.\\[6pt]
@@ -256,7 +222,7 @@ constituents in learning. {\it Psychonomic Bulletin \& Review}. {\it 23}(1), 271
 \subsection*{Book chapters}
 
 \begin{longtable}{p{0.7cm}p{15cm}}
-2024 & \textbf{Popov, V.} \& Reder, L. (2024). Frequency effects in recognition and recall. In M. Kahana \& A. Wagner (Eds.), {\it The Oxford Handbook of Human Memory} (pp. 765--796). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780190917982.013.27
+2024 & \textbf{Popov, V.} \& Reder, L. (2024). Frequency effects in recognition and recall. In M. Kahana \& A. Wagner (Eds.), {\it The Oxford Handbook of Human Memory} (pp. 765--796). Oxford University Press. \url{https://doi.org/10.1093/oxfordhb/9780190917982.013.27}
 \end{longtable}
 
 \subsection*{Refereed full conference papers}
@@ -295,49 +261,6 @@ constituents in learning. {\it Psychonomic Bulletin \& Review}. {\it 23}(1), 271
 {\it bmm} & Lead author. An R package for Bayesian Measurement Modeling of Visual Working Memory\\	
 \end{longtable}
 
-% \subsection*{Abstracts}
-
-% \begin{longtable}{p{0.7cm}p{15cm}}
-% 2019 & \textbf{Popov, V.}, So, M., \& Reder, L. (2019). Word frequency affects binding probability not memory precision. {\it Proceedings of the 41st Annual Conference of the Cognitive Science Society} (pp.). Austin, TX: Cognitive Science Society.\\[6pt]
-% % &\\
-% & \textbf{Popov, V.}, Zhang, Q., Koch, G., Halloway, R. \& Coutanche, M. (2019). The effect on semantic relatedness on associative asymmetry in memory. {\it Proceedings of the 41st Annual Conference of the Cognitive Science Society} (pp.). Austin, TX: Cognitive Science Society.\\[6pt]
-% % &\\
-% 2018 & \textbf{Popov, V.}, Pavlova, M., \& Hristova, P. (2018). Role vs relational similarity in analogical processing.  {\it Abstracts of the 59th Annual Meeting of the psychonomic Society}. Madison, WI\\[6pt]
-% % &\\
-% 2017 & \textbf{Popov, V.} \& Reder, L. (2017). Greater discrimination difficulty during visual search training leads to stronger and more distinct representations. {\it Abstracts of the 58th Annual Meeting of the psychonomic Society}. Vancouver, BC, Canada\\[6pt]
-% % &\\
-% & Reder, L. \& \textbf{Popov, V.} (2017). Manipulation of Stimulus Familiarity: Effects on Working Memory Resources, Performance in Complex Cognitive Tasks, and Knowledge Formation. {\it Abstracts of the 58th Annual Meeting of the psychonomic Society}. Vancouver, BC, Canada\\[6pt]
-% % & \\
-% & \textbf{Popov, V.}, Pavlova, M., \& Hristova, P. (2017). Semantic Relations Vary in the Strength, Typicality and Accessibility of their Representations in Long-Term Memory. {\it Proceedings of the 4th Analogy Conference}. Paris, France\\[6pt]
-% % &\\
-% & \textbf{Popov V.}, \& Hristova, P. (2017). The Relational Luring Effect: False Recognition via Relational Similarity. In G. Gunzelmann, A. Howes, T. Tenbrink, \& E. Davelaar (Eds.), {\it Proceedings of the 39th Annual Conference of the Cognitive Science Society} (pp.). Austin, TX: Cognitive Science Society.\\[6pt]
-% % &\\
-% & Nedelchev, D., \textbf{Popov, V.}, Psederska, E., Bozgunov, K., Vasilev, G., Peneva, E., \& Vassileva, J. (2016). Psychometric characteristics of the Bulgarian version of the Wender Utah Rating Scale for ADHD. {\it 2nd National Congress of Clinical Psychology}. Sofia, Bulgaria. \\[6pt]
-% % &\\
-% & Bozgunov, K., \textbf{Popov, V.}, Psedarska, E., Vasilev, G., Nedelchev, D., \& Vassileva, J. (2017). Psychometric characteristics of the Bulgarian version of the Toronto Alexithymia Scale (TAS-20). {\it 7th International Congress of Psychologists of Slovenia - Applied Neuropsychology: Between Small and Big Networks}. Kranjska Gora, Slovenia.\\[6pt]
-% % &\\
-% 2016 & \textbf{Popov, V.} \& Reder, L. (2016). Semantic-episodic interactions during memory retrieval. In {\it Abstracts of the 57th Annual Meeting of the Psychonomic Society}. Boston, Massachusetts\\[6pt]
-% % &\\
-% & Shen, Z., Reder, L., \textbf{Popov, V.}, \& Delahay, A. (2016). Symbol Familiarity Interacts With Working Memory Demands During Mathematical Problem-Solving. In {\it Abstracts of the 57th Annual Meeting of the Psychonomic Society}. Boston, Massachusetts\\[6pt]
-% % &\\
-% & Vogt, K., Ibinson, J., Tremel, J., \textbf{Popov, V.}, Reder, L., \& Fiez, J. (2016). Variability in the Effect of Experimental Pain on Longterm Memory During Sedation with Dexmedetomidine \& Midazolam. In {\it Abstracts of the Anestesiology 2016 Annual Meeting}. Chicago, IL\\[6pt]
-% % &\\
-% & Reder, L. M., Liu, X. L., Keinath, A. \& \textbf{Popov, V.} (2015). Knowledge construction requires bricks, not sand: The critical role of familiar constituents in learning. {\it International Meeting of the Psychonomic Society}. Granada, Spain \\[6pt]
-% % &\\
-% 2015 &  \textbf{Popov, V.}, Hristova, P. \& Anders, R. (2015). Retrieval of relational information during associative recognition. In {\it Abstracts of the 56th Annual Meeting of the Psychonomic Society}. Chicago, IL\\[6pt]
-% % &\\
-% & Reder, L. M., Liu, X. L., Keinath, A. \& \textbf{Popov, V.} (2015). Building knowledge requires bricks, not sand: The critical role of familiar constituents in learning. In {\it Abstracts of the 56th Annual Meeting of the Psychonomic Society}. Chicago, IL \\[6pt]
-% % &\\
-% & \textbf{Popov, V.} (2015).  A spreading-activation model of associates retrieval in a discrete free association task. In N. Taatgen, M. van Vugt, J. Borst, \& K. Mehlhorn (Eds.), {\it Proceedings of the 13th International Conference on Cognitive Modeling}. Groenigen: Rijksuniversiteit Groenigen\\[6pt]
-% % &\\
-% 2014 & \textbf{Popov, V. }\& Hristova, P. (2014). Unconscious, unintended and efficient analogies in lexical decision under dual-task conditions. In P. Bello, M. Guarini, M. McShane, \& B. Scassellati (Eds.), {\it Proceedings of the 36th Annual Conference of the Cognitive Science Society}. Austin, TX: Cognitive Science Society.\\[6pt]
-% % &\\
-% & \textbf{Popov, V.} \& Hristova, P. (2014). Priming thematic structure during sentence comprehension in the absence of syntactic repetition. In {\it Abstracts of the VI. Dubrovnik Conference on Cognitive Science.} Dubrovnik, Croatia.\\[6pt]
-% % &\\
-% & \textbf{Popov, V.} (2014). Malleability of the basic level effect in categorical induction for biological categories. In {\it Abstracts of the VI. Dubrovnik Conference on Cognitive Science}. Dubrovnik, Croatia.\\[6pt]
-% % &\\
-% 2013 & \textbf{Popov, V.} (2013). Fixation on Failure: Failing to Solve a Problem Hinders Subsequent Problem-Solving Ability. In M. Knauff, M. Pauen, N. Sebanz, \& I. Wachsmuth (Eds.), {\it Proceedings of the 35th Annual Conference of the Cognitive Science Society} (p. 4080). Austin, TX: CSS.\\[6pt]
-% \end{longtable}
 
 \section*{Presentations}
 \subsection*{Invited talks}
@@ -396,78 +319,6 @@ constituents in learning. {\it Psychonomic Bulletin \& Review}. {\it 23}(1), 271
 2013 & Experiencing failure increases problem-solving time in current performance. {\it Oral presentation at the Annual Conference of the Department of Cognitive Science and Psychology}. Ribaritza, Bulgaria\\[6pt]
 
 \end{longtable}
-
-%\subsection*{Conference posters}
-%\begin{longtable}{p{0.7cm}p{15cm}}
-%2019 & Word frequency affects binding probability not memory precision.. {\it Poster presented at the Annual Meeting of the Psychonomic Society}. Montreal, CA\\[6pt]
-% &\\
-%& Word frequency affects binding probability not memory precision.. {\it Poster presented at the 2019 Context 
-% Episodic Memory Symposium (CEMS)}. Philadelphia, PA\\[6pt]
-% &\\
-%2018 & Role vs relational similarity in analogical processing. {\it Poster presented at the 59th Annual Meeting of the Cognitive Science Society}. Madison, WI\\[6pt]
-% &\\
-%&  Fast Memory Integration Facillitated by Schema Consistency. {\it Poster presented at the 59th Annual Meeting of the Cognitive Science Society}. Madison, WI\\[6pt]
-% &\\
-%2017 & Greater discrimination difficulty during visual search training leads to stronger and more distinct representations. {\it Poster presented at the 58th Annual Meeting of the Cognitive Science Society}. Vancouver, BC, Canada\\[6pt]
-% &\\
-%& Repetition improves memory by strengthening existing traces: Evidence from paired-associate learning under midazolam. {\it Poster presented at the 39th Annual Conference of the Cognitive Science Society}. London, UK.\\[6pt]
-%&\\
-%2016 & Semantic-Episodic Interactions During Memory Retrieval. {\it Poster presented at Psychonomic Society's 57th Annual Meeting}. Boston, Massachusetts\\[6pt]
-%&\\
-%2015 & Retrieval of relational information during associative recognition. {\it Poster presented at Psychonomic Society's 56th Annual Meeting}. Chicago, Illinois\\[6pt]
-% &\\
-%& Retrieval of relational information during associative recognition. {\it Poster presented at the Center for the Neural Basis of Cognition Annual Retreat}. Pittsburgh, PA.\\[6pt]
-% &\\
-%& A spreading-activation model of associates retrieval in a discrete free association task. {\it Poster presented at the 13th International Conference on Cognitive Modeling}. Groenigen, Germany\\[6pt]
-% &\\
-%2014 & The level of processing affects the magnitude of induced retrograde amnesia. {\it Poster presented at the 36th Annual Conference of the Cognitive Science Society}. Quebec City, Canada.\\[6pt]
-% &\\
-%& Unconscious, unintended and efficient analogies in lexical decision under dual-task conditions. {\it  Poster presented at the 36th Annual Conference of the Cognitive Science Society}. Quebec City, Canada.\\[6pt]
-% &\\
-%& Malleability of the basic level effect in categorical induction for biological categories. {\it  Poster presented at the VI. Dubrovnik Conference on Cognitive Science}. Dubrovnik, Croatia.\\[6pt]
-% &\\
-%& Priming thematic structure during sentence comprehension in the absence of syntactic repetition. {\it  Poster presented at the VI. Dubrovnik Conference on Cognitive Science}. Dubrovnik, Croatia.\\[6pt]
-% &\\
-%2013 & Fixation on Failure: Failing to Solve a Problem Hinders Subsequent Problem-Solving Ability. {\it Poster presented at the 35th Annual Conference of the Cognitive Science Society.} Austin, TX: Cognitive Science Society.\\[6pt]
-%
-%\end{longtable}
-
-%\section*{Professional activities}
-%\subsection*{Memberships}
-%
-%Cognitive Neuroscience Society, student member\\
-%Psychonomic Society, student member\\
-%Cognitive Science Society (CSS), student member
-
-%\section*{Departmental and professional service}
-%\begin{tabular}{rl}
-%	2017 & Graduent student host for invited speaker, Department of Psychology Colloquium series\\ & Carnegie Mellon University\\
-%	2016 - 2017 & Graduent student representative, Faculty meetings, Carnegie Mellon University\\
-%\end{tabular}
-
-% \section*{Research and work experience}
-
-% \begin{tabular}{rl}
-% 	06.2015 - current & Ph.D. student, Memory Lab, Carnegie Mellon University \\
-% 	& Director: Lynne M. Reder, Ph.D. \\
-% 	&\\	
-
-% 	01.2015 - 08.2015 & Data Analyst, Bulgarian Addictions Institute \\
-% 	& Directors: Jasmin Vassileva, Ph.D., \& Georgi Vasilev, M.D. \\
-% 	% & \begin{minipage}{0.8\textwidth}
-% 	% 		\medskip
-% 	% 		I was mainly responsible for data analysis on an international research project funded by grant 2R01DA021421 from the National Institute on Drug Abuse (NIDA) - USA, that aims to explore how different personality and neurocognitive aspects of impulsivity can affect and be affected by drug addiction.
-% 	% 	\end{minipage}\\
-% 	&\\	
-
-% 	03.2013 - 12.2014 & Researcher and Lab Coordinator, Experimental Psychology Lab, NBU\\
-% 	& Director: Assist. Prof. Penka Hristova\\
-% 	% & \begin{minipage}{0.8\textwidth}
-% 	% 	\medskip
-% 	% 	I planed, designed and executed behavioral experiments on analogy-making, constructive memory, concepts and categorization and language comprehension. Other activities included generating stimuli, data analysis, creating e-prime scripts, preparing manuscripts and weekly presentations during seminars.
-% 	% \end{minipage}\\
-
-% \end{tabular}
 
 \section*{Teaching experience}
 
@@ -543,7 +394,7 @@ constituents in learning. {\it Psychonomic Bulletin \& Review}. {\it 23}(1), 271
 
 \begin{tabular}{rl}
 	2021 - current & Consulting Editor, {\it Memory and Cognition}\\
-	2021 - current & Symposium co-organizer, {\it Distributed Working Memory Series (DWMS; https://bit.ly/3F27hrS)}
+	2021 - current & Symposium co-organizer, {\it Distributed Working Memory Series}
 \end{tabular}
 
 \section*{Ad hoc reviewer}
@@ -576,58 +427,7 @@ constituents in learning. {\it Psychonomic Bulletin \& Review}. {\it 23}(1), 271
 \end{longtable}
 
 
-%\section*{Technical skills}
-%
-%I am well versed in a number of advanced statistical approaches. For most of my behavioral work, I employ multilevel modeling, including frequentist mixed-effects linear, logistic and multinomial regressions (e.g., Popov \& Hristova, 2015; Popov, Hristova \& Anders, 2017), as well as Bayesian multi-level models (e.g. Popov et al., 2017; Popov, Marevic, Rummel \& Reder, 2019). During my pre-graduate job as a Data Scientist, I employed various psychometric methods such as factor analysis, principle components analysis, ROC analysis, and others, for testing and validating a number of personality scales (e.g. Popov et al., 2016). As part of my statistical training, I have assisted teaching a graduate-level course in Data Science for Psychology and Neuroscience (CMU-85732), and a graduate-level course in Parallel Distributed Processing (CMU-85719). \\
-%
-%In my computational modelling work, I have employed connectionist modelling (Popov \& Reder, 2017), hierarchical drift-diffusion modelling (Popov, Hristova \& Anders, 2017), mixture modelling of continuous report data (Popov, So \& Reder, 2019), and the Source of Activation Confusion process model of memory (Popov \& Reder, in press; Popov, Marevic, Rummel \& Reder, 2019). I have also used simulations of neural encoding models to highlight some inferential pitfalls in cognitive neuroscience (Popov, Ostarek \& Tenison, 2018).
-%
-%\section*{Open Science Commitment}
-%
-%I have a strong commitment to open science principles that make my work more transparent and reproducible. I perform all statistical analysis via R and/or Python scripts and I routinely share the experimental software, stimuli, analysis code and raw data for my projects on my website (http://venpopov.com/2017/01/06/publications/), my github page (https://github.com/venpopov?tab=repositories), and the Open Science Framework. I often employ preregistration and planned replications of surprising findings (e.g., Popov, Marevic, Rummel \& Reder, 2019; Popov, Zhang, Koch, Calloway \& Coutanche, 2019).
-
-
-% \section*{Additional education and professional training}
-% European Campus of Excellence Summer School, Memory and Mind: Perspectives from Philosophy and Neuroscience. Germany, Bochum: Ruhr University Bochum, 7-21 September (2014)\smallskip\\
-% 20th International Summer School in Cognitive Science. Sofia, Bulgaria: NBU (2013)\smallskip\\
-% 19th International Summer School in Cognitive Science. Sofia, Bulgaria: NBU (2012)
-
-% \section*{Research interests}
-% Neural mechanisms of memory formation, consolidation and retrieval. Representation of semantic knowledge in the brain. Computational modeling of neural and psychological mechanisms. Other topics: brain-computer interfaces, relational reasoning, concepts and categorization, problem-solving, cognitive modeling, connectionism, philosophy of science
-
-% \section*{Other information}
-% \subsection*{Technical competencies}
-% \begin{itemize}
-% \item Data analysis, modeling and visualization with R (lme4, ggplot, R2jags, rube, RMarkdown, etc)
-% \item Matlab (SPM12), Python (nipype), Freesurfer
-% \item SPSS, LaTeX, Advanced MS OFFICE skills 
-% \item E-prime 2.0, OpenSesame, Python
-% \item Basic knowledge in PHP, HTML, MYSQL, Photoshop
-% \end{itemize}
-% \subsection*{Language competencies}
-% \begin{itemize}
-% \item Bulgarian (mother tongue) | English | Some German
-% \end{itemize}
-% \subsection*{Graduate record examination (GRE)}
-% \begin{itemize}
-% \item VR: 167/170; 97 percentile rank; QR: 170/170; 98 percentile rank, AW: 5.0/6.0; 93 percentile rank
-% \end{itemize}
-
-
-
-
-
-
-
-
 \bigskip
 
-% Footer
-%\begin{center}
-%  \begin{footnotesize}
-%    Last updated: \today \\
-%    \href{\footerlink}{\texttt{\footerlink}}
-%  \end{footnotesize}
-%\end{center}
 
 \end{document}
