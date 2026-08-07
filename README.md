@@ -1,4 +1,4 @@
-## Initial Setup (New Machine)
+## Initial Setup (New machine)
 
 After cloning the repository:
 
