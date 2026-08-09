@@ -42,7 +42,6 @@ jobs:
         env:
           RENV_CONFIG_REPOS_OVERRIDE: ${{ env.RSPM }}
           RENV_CONFIG_PAK_ENABLED: "FALSE"
-          RENV_CONFIG_INSTALL_FROM_SOURCE: "TRUE"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
