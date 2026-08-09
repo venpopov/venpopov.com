@@ -24,7 +24,6 @@ jobs:
         uses: r-lib/actions/setup-r@v2
         with:
           r-version: 'renv'
-          use-public-rspm: true
 
       - name: Install system dependencies
         run: |
@@ -36,12 +35,6 @@ jobs:
             libtbb-dev \
             pandoc \
             pandoc-citeproc
-
-      - name: Force source package installation for compiled packages
-        shell: bash
-        run: |
-          mkdir -p ~/.R
-          echo 'options(pkgType = "source")' >> ~/.Rprofile
 
       - name: Setup renv
         uses: r-lib/actions/setup-renv@v2
