@@ -37,21 +37,16 @@ jobs:
             pandoc \
             pandoc-citeproc
 
-      - name: Restore renv cache
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.RENV_PATHS_ROOT }}
-          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-renv-
+      - name: Force source package installation for compiled packages
+        shell: bash
+        run: |
+          mkdir -p ~/.R
+          echo 'options(pkgType = "source")' >> ~/.Rprofile
 
-      - name: Restore renv packages
-        shell: Rscript {0}
+      - name: Setup renv
+        uses: r-lib/actions/setup-renv@v2
         env:
           RENV_CONFIG_PAK_ENABLED: "FALSE"
-        run: |
-          options(pkgType = "source")
-          renv::restore()
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
