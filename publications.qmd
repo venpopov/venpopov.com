@@ -127,7 +127,7 @@ Reder, L. M., Liu, X. L., Keinath, A., & **Popov, V.** (2016). Building knowledg
 ::: {layout="[[1,9],[1,9],[1,9],[1,9],[1,9],[1,9],[1,9],[1,9],[1,9]]"}
 2018
 
-Zhang, Q.\*, **Popov, V.\*** (co-first authors), Koch, G. E., Calloway, R. C. & Coutanche, M. N. (2018). Fast Memory Integration Facillitated by Schema Consistency. In C. Kalish, M. Rau, J. Zhu, T. Rogers (Eds.), *Proceedings of the 40th Annual Conference of the Cognitive Science Society.* Austin, TX: Cognitive Science Society. [\[PDF\]](https://venpopov.com/papers/zhang-popov-schema-integration-cogsci2018.pdf)
+Zhang, Q.\*, **Popov, V.\*** (co-first authors), Koch, G. E., Calloway, R. C. & Coutanche, M. N. (2018). Fast Memory Integration Facilitated by Schema Consistency. In C. Kalish, M. Rau, J. Zhu, T. Rogers (Eds.), *Proceedings of the 40th Annual Conference of the Cognitive Science Society.* Austin, TX: Cognitive Science Society. [\[PDF\]](https://venpopov.com/papers/zhang-popov-schema-integration-cogsci2018.pdf)
 
 2017
 
@@ -163,7 +163,7 @@ Zhang, Q.\*, **Popov, V.\*** (co-first authors), Koch, G. E., Calloway, R. C. & 
 
 \
 
-Nedelchev, D., [**Popov, V.**]{.underline}, Psedarska, E., Bozgunov, K., Vasilev, G., Peneva, E., & Vassileva, J. (2016). Psychometric Characteristics of the Bulgarian Version of the Wender Utah Rating Scale (WURS-25) for ADHD. *Clinical and Consulting Psychology, 8*(2), 3-17 (in Bulgarian)
+Nedelchev, D., [**Popov, V.**]{.underline}, Psederska, E., Bozgunov, K., Vasilev, G., Peneva, E., & Vassileva, J. (2016). Psychometric Characteristics of the Bulgarian Version of the Wender Utah Rating Scale (WURS-25) for ADHD. *Clinical and Consulting Psychology, 8*(2), 3-17 (in Bulgarian)
 
 2015
 
