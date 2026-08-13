@@ -47,6 +47,14 @@
 \sectionfont{\rmfamily\mdseries\Large}
 \subsectionfont{\rmfamily\mdseries\itshape\large}
 
+% Keep section titles attached to the content that follows them:
+% require a minimum amount of free space before a heading, otherwise
+% move it to the next page
+\usepackage{needspace}
+\usepackage{etoolbox}
+\pretocmd{\section}{\needspace{8\baselineskip}}{}{}
+\pretocmd{\subsection}{\needspace{6\baselineskip}}{}{}
+
 % Don't indent paragraphs.
 \setlength\parindent{0em}
 
