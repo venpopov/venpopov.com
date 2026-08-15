@@ -34,8 +34,8 @@ website:
         text: CV
       - text: R Packages
         menu:
-          - href: https://venpopov.github.io/bmm/index.html
-            text: bmm (Bayesian Measurement Modeling
+          - href: https://venpopov.com/bmm/
+            text: bmm (Bayesian Measurement Modeling)
           - href: https://venpopov.github.io/chkptstanr/index.html
             text: chkptstanr (Checkpointing for Stan)
       - href: posts/index.qmd
