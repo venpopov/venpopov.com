@@ -6,7 +6,7 @@ title-block-banner: true
 
 ## Preprints
 
-[**Popov, V.**]{.underline} (2026). A Poisson Count Race as a Generative Bridge Between Logit and Probit Choice. *PsyArXiv.* [\[DOI\]](https://doi.org/10.31234/osf.io/r36vs_v1)
+[**Popov, V.**]{.underline} (2026). A Poisson Count Race as a Generative Bridge Between Logit and Probit Choice. *PsyArXiv.* [\[HTML\]](https://venpopov.com/logit-probit-poisson-rum/) [\[DOI\]](https://doi.org/10.31234/osf.io/r36vs_v1)
 
 [**Popov, V.**]{.underline} (2026). *m*-Bell and *m*-Stirling numbers: Iterated binomial transforms, hyper-Bessel functions, and moments of the Conway–Maxwell–Poisson distribution. *arXiv.* [\[PDF\]](https://venpopov.com/papers/popov-mbell-mstirling-arxiv2026.pdf) [\[DOI\]](https://doi.org/10.48550/arXiv.2608.12011)
 
